@@ -1,6 +1,6 @@
 {
   "name": "@via-org/arweave-node-crypto",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "type": "module",
   "exports": {
     "import": "./lib/index.mjs",
@@ -9,6 +9,10 @@
   "module": "./lib/index.mjs",
   "main": "./lib/index.cjs",
   "types": "types/index.d.ts",
+  "browser": {
+    "crypto": false,
+    "@panva/asn1.js": "./shims/@panva/asn1.js"
+  },
   "files": [
     "lib",
     "types"
@@ -26,5 +30,9 @@
     "build": "shx rm -rf ./lib && rollup -c && tsc -p jsconfig.json",
     "test": "ava",
     "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@panva/asn1.js": "^1.0.0",
+    "@via-org/data-utils": "^0.1.2"
   }
 }
