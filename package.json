@@ -8,7 +8,7 @@
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
-    "version": "lerna run version",
+    "version": "lerna version",
     "prepare": "husky install"
   },
   "devDependencies": {
