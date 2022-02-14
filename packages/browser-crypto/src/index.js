@@ -10,6 +10,7 @@ export class BrowserCrypto {
    * @param {(Uint8Array|Uint8Array[])} data
    * @param {Object} algo
    * @param {string} algo.browser
+   * @param {string} algo.node
    * @returns {Promise<Uint8Array>}
    */
   async hash(data, algo) {
