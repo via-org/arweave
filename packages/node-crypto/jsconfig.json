@@ -2,7 +2,7 @@
   "compilerOptions": {
     "checkJs": true,
     "noImplicitAny": true,
-    "noImplicitThis": true,
+    "noImplicitThis": false,
     "target": "esnext",
     "declaration": true,
     "emitDeclarationOnly": true,
