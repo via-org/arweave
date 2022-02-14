@@ -26,5 +26,8 @@
     "build": "shx rm -rf ./lib && rollup -c && tsc -p jsconfig.json",
     "test": "ava",
     "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@via-org/data-utils": "^0.1.2"
   }
 }
