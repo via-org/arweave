@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@hbauer/avro@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@hbauer/avro/-/avro-2.0.1.tgz#0c62c2edcd4c567d2bb4aeebf359773a5bd83884"
-  integrity sha512-78to88CCxCL+HXSE51l/1kM8Ji0MQbmc+Nk5JfEJaSfyKdzX1vauZQb2acR/j4iFaRjdvDBmnKJdH/3W75ekmA==
-
 "@hbauer/convenience-functions@^0.11.0", "@hbauer/convenience-functions@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@hbauer/convenience-functions/-/convenience-functions-0.11.1.tgz#f306070e537e269547c83293f5f17a25bcbaf1ee"
   integrity sha512-CQpL0bsJb4RLHlaCMNVkZu7Sl/bUfe8WKkcvf6exUqHET+RWtT+Ydxqr+M9clbt6c5iHRs3MZtDdp38pND1K1g==
+
+"@via-org/avro@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@via-org/avro/-/avro-2.0.4.tgz#15440aa5beb1f91e4a751fcdd3fd068ec7be264c"
+  integrity sha512-hrC930NDhSlSWpz2FyflepmPBfPfb7SJEvWp3A3taX3QtsaZAOVAENGMvreIbLBEbjeEyXwBlC8gbq3FfUB/cg==
 
 "@via-org/data-utils@^0.1.2":
   version "0.1.2"
