@@ -1,6 +1,6 @@
 {
   "name": "@via-org/arweave-client",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "type": "module",
   "exports": {
     "import": "./lib/index.mjs",
@@ -28,7 +28,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@via-org/arweave-browser-crypto": "^0.2.1",
-    "@via-org/arweave-node-crypto": "^0.2.3"
+    "@via-org/arweave-browser-crypto": "^0.2.4",
+    "@via-org/arweave-node-crypto": "^0.2.4"
   }
 }
