@@ -48,8 +48,8 @@ const RSAPrivateKey = asn.define('RSAPrivateKey', function () {
 })
 
 /**
- * @param {Object<string, string>} jwk
- * @returns {Object<string, (BigInt|string)>}
+ * @param {JsonWebKey} jwk
+ * @returns {{ [key: string]: BigInt | string }}
  */
 const parse = jwk => ({
   n: base64ToBignum(jwk.n),
@@ -63,7 +63,7 @@ const parse = jwk => ({
 })
 
 /**
- * @param {Object<string, string>} json
+ * @param {JsonWebKey} json
  * @returns {string}
  */
 export const jwkToPem = json => {

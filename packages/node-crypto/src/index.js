@@ -11,9 +11,7 @@ export class NodeCrypto {
 
   /**
    * @param {(Uint8Array|Uint8Array[])} data
-   * @param {Object} algo
-   * @param {string} algo.node
-   * @param {string} algo.browser
+   * @param {{ node: string, browser: string }} [algo]
    * @returns {Uint8Array}
    */
   hash(data, algo) {
@@ -26,7 +24,7 @@ export class NodeCrypto {
 
   /**
    * @param {Uint8Array} data
-   * @param {Object<string, string>} jwk
+   * @param {JsonWebKey} jwk
    * @returns {Uint8Array}
    */
   sign(data, jwk) {

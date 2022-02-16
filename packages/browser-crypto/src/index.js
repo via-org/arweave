@@ -8,9 +8,7 @@ export class BrowserCrypto {
 
   /**
    * @param {(Uint8Array|Uint8Array[])} data
-   * @param {Object} algo
-   * @param {string} algo.browser
-   * @param {string} algo.node
+   * @param {{ browser: string, node: string }} [algo]
    * @returns {Promise<Uint8Array>}
    */
   async hash(data, algo) {
@@ -23,7 +21,7 @@ export class BrowserCrypto {
 
   /**
    * @param {Uint8Array} data
-   * @param {Object} jwk
+   * @param {JsonWebKey} jwk
    * @returns {Promise<Uint8Array>}
    */
   async sign(data, jwk) {
@@ -34,7 +32,7 @@ export class BrowserCrypto {
   }
 
   /**
-   * @param {Object} jwk
+   * @param {JsonWebKey} jwk
    * @returns {Promise<CryptoKey>}
    */
   importKey(jwk) {
