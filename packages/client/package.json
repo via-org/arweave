@@ -28,7 +28,11 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
+    "@hbauer/avro": "^2.0.1",
+    "@hbauer/convenience-functions": "^0.11.1",
     "@via-org/arweave-browser-crypto": "^0.2.4",
-    "@via-org/arweave-node-crypto": "^0.2.4"
+    "@via-org/arweave-node-crypto": "^0.2.4",
+    "@via-org/data-utils": "^0.1.2",
+    "cross-fetch": "^3.1.5"
   }
 }
