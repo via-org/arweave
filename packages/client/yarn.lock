@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@via-org/avro/-/avro-2.0.4.tgz#15440aa5beb1f91e4a751fcdd3fd068ec7be264c"
   integrity sha512-hrC930NDhSlSWpz2FyflepmPBfPfb7SJEvWp3A3taX3QtsaZAOVAENGMvreIbLBEbjeEyXwBlC8gbq3FfUB/cg==
 
-"@via-org/data-utils@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@via-org/data-utils/-/data-utils-0.1.2.tgz#f9410535b81a9536896d8f8d1981ef031dd8e327"
-  integrity sha512-7KCpLBCeU/nQ6xV2w0HpB+vLl8sS0254DkgUTuIhj2HF8UsCc5jKf1OdtbcPBDJhji8CxdWZXNyUbNaiGDlujg==
+"@via-org/data-utils@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@via-org/data-utils/-/data-utils-0.2.0.tgz#0d9e1a17d05d4cfbc5dd41cce45c218b57725527"
+  integrity sha512-JBfge3p+/MUT0x1W4Wcbb7nCNyxgwRffQR7OQQytRDorddaRCceqbpg086vUKXQ23t+ZUwoFrwrVXfzvAGZOoQ==
   dependencies:
     "@hbauer/convenience-functions" "^0.11.0"
 
