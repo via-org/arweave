@@ -1,6 +1,6 @@
 {
   "name": "@via-org/deep-hash-list",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "type": "module",
   "exports": {
     "import": "./lib/index.mjs",
