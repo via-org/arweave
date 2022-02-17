@@ -1,0 +1,36 @@
+{
+  "name": "@via-org/arweave-crypto",
+  "version": "0.2.7",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "module": "./lib/index.mjs",
+  "main": "./lib/index.cjs",
+  "types": "types/index.d.ts",
+  "files": [
+    "lib",
+    "types"
+  ],
+  "author": "Donald Geddes",
+  "licence": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "prettier": "@hbauer/prettier-config",
+  "eslintConfig": {
+    "extends": "@hbauer/eslint-config"
+  },
+  "scripts": {
+    "build": "shx rm -rf ./lib && rollup -c && tsc -p jsconfig.json",
+    "test": "ava",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@via-org/arweave-browser-crypto": "^0.2.4",
+    "@via-org/arweave-node-crypto": "^0.2.4"
+  }
+}
