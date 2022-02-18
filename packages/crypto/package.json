@@ -8,6 +8,9 @@
       "require": "./lib/index.cjs"
     }
   },
+  "browser": {
+    "@via-org/arweave-node-crypto": "./shims/@via-org/arweave-node.crypto.js"
+  },
   "module": "./lib/index.mjs",
   "main": "./lib/index.cjs",
   "types": "types/index.d.ts",
