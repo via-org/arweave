@@ -26,22 +26,38 @@ export class BrowserCrypto {
    */
   async sign(data, jwk) {
     const algo = { name: 'RSA-PSS', saltLength: 32 }
-    const key = await this.importKey(jwk)
+    const key = await this.importKey(jwk, 'sign')
     const signature = await this.crypto.sign(algo, key, data)
     return new Uint8Array(signature)
   }
 
   /**
-   * @param {JsonWebKey} jwk
+   * @param {JsonWebKey['n']} owner
+   * @param {Uint8Array} data
+   * @param {Uint8Array} signature
+   */
+  async verify(owner, data, signature) {
+    /** @param {number} saltLength */
+    const _verify = saltLength =>
+      this.crypto.verify({ name: 'RSA-PSS', saltLength }, key, signature, data)
+
+    const jwk = { kty: 'RSA', e: 'AQAB', n: owner }
+    const key = await this.importKey(jwk, 'verify')
+    const [salt, noSalt] = await Promise.all([32, 0].map(_verify))
+    return salt || noSalt
+  }
+
+  /**
+   * @param {(JsonWebKey| JsonWebKey['n'])} jwk
+   * @param {string} usage
    * @returns {Promise<CryptoKey>}
    */
-  importKey(jwk) {
+  importKey(jwk, usage) {
     const algo = { name: 'RSA-PSS', hash: { name: 'SHA-256' } }
     const extractable = false
-    const usages = ['sign']
     // @ts-ignore - According to
     // https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey,
     // this is fine ¯\_(ツ)_/¯
-    return this.crypto.importKey('jwk', jwk, algo, extractable, usages)
+    return this.crypto.importKey('jwk', jwk, algo, extractable, [usage])
   }
 }
