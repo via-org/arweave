@@ -28,8 +28,25 @@ export class NodeCrypto {
    * @returns {Uint8Array}
    */
   sign(data, jwk) {
-    const key = jwkToPem(jwk)
+    const pem = jwkToPem(jwk)
     const padding = this.crypto.constants.RSA_PKCS1_PSS_PADDING
-    return this.crypto.createSign('sha256').update(data).sign({ key, padding })
+    return this.crypto
+      .createSign('sha256')
+      .update(data)
+      .sign({ key: pem, padding })
+  }
+
+  /**
+   * @param {JsonWebKey['n']} owner
+   * @param {Uint8Array} data
+   * @param {Uint8Array} signature
+   */
+  verify(owner, data, signature) {
+    const pem = jwkToPem({ kty: 'RSA', e: 'AQAB', n: owner })
+    const padding = this.crypto.constants.RSA_PKCS1_PSS_PADDING
+    return this.crypto
+      .createVerify('sha256')
+      .update(data)
+      .verify({ key: pem, padding }, signature)
   }
 }
