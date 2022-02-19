@@ -42,7 +42,8 @@ export class NodeCrypto {
    * @param {Uint8Array} signature
    */
   verify(owner, data, signature) {
-    const pem = jwkToPem({ kty: 'RSA', e: 'AQAB', n: owner })
+    const jwk = { kty: 'RSA', e: 'AQAB', n: owner }
+    const pem = jwkToPem(jwk)
     const padding = this.crypto.constants.RSA_PKCS1_PSS_PADDING
     return this.crypto
       .createVerify('sha256')
