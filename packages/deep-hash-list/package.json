@@ -1,6 +1,6 @@
 {
   "name": "@via-org/deep-hash-list",
-  "version": "0.2.9",
+  "version": "0.2.11",
   "type": "module",
   "exports": {
     "import": "./lib/index.mjs",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@hbauer/convenience-functions": "^0.11.1",
-    "@via-org/arweave-crypto": "^0.2.8",
+    "@via-org/arweave-crypto": "^0.2.11",
     "@via-org/data-utils": "^0.2.0"
   }
 }
