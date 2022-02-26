@@ -19,6 +19,7 @@ export class BrowserCrypto {
     return new Uint8Array(digest)
   }
 
+  /** @returns {Promise<JsonWebKey>} */
   async generateJWK() {
     const algo = {
       name: 'RSA-PSS',
