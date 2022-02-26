@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import { concatUint8Arrays } from '@via-org/data-utils'
 
-import { jwkToPem } from './utils/index.js'
+import { jwkToPem, pemToJwk } from './utils/index.js'
 
 export class NodeCrypto {
   constructor() {
@@ -20,6 +20,21 @@ export class NodeCrypto {
       .update(Array.isArray(data) ? concatUint8Arrays(data) : data)
       .digest()
     return new Uint8Array(digest)
+  }
+
+  generateJWK() {
+    const type = 'rsa'
+    const opts = {
+      modulusLength: 4096,
+      publicExponent: 0x10001,
+      privateKeyEncoding: {
+        type: 'pkcs1',
+        format: 'pem',
+      },
+      publicKeyEncoding: { type: 'pkcs1', format: 'pem' },
+    }
+    const { privateKey } = this.crypto.generateKeyPairSync(type, opts)
+    return pemToJwk(privateKey)
   }
 
   /**
