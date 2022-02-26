@@ -73,10 +73,10 @@ export class BrowserCrypto {
    */
   importKey(jwk, usage) {
     const algo = { name: 'RSA-PSS', hash: { name: 'SHA-256' } }
-    const extractable = false
+    const isExtractable = false
     // @ts-ignore - According to
     // https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey,
     // this is fine ¯\_(ツ)_/¯
-    return this.crypto.importKey('jwk', jwk, algo, extractable, [usage])
+    return this.crypto.importKey('jwk', jwk, algo, isExtractable, [usage])
   }
 }
