@@ -19,6 +19,24 @@ export class BrowserCrypto {
     return new Uint8Array(digest)
   }
 
+  async generateJWK() {
+    const algo = {
+      name: 'RSA-PSS',
+      modulusLength: 4096,
+      publicExponent: new Uint8Array([0x01, 0x00, 0x01]),
+      hash: {
+        name: 'SHA-256',
+      },
+    }
+    const isExtractable = true
+    const usage = 'sign'
+    const keyPair = await this.crypto.generateKey(algo, isExtractable, [usage])
+    const jwk = await this.crypto.exportKey('jwk', keyPair.privateKey)
+    /** @type {('kty'|'e'|'n'|'d'|'p'|'q'|'dp'|'dq'|'qi')[]} */
+    const targetKeys = ['kty', 'e', 'n', 'd', 'p', 'q', 'dp', 'dq', 'qi']
+    return targetKeys.reduce((acc, key) => ({ ...acc, [key]: jwk[key] }), {})
+  }
+
   /**
    * @param {Uint8Array} data
    * @param {JsonWebKey} jwk
