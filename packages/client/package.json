@@ -1,6 +1,6 @@
 {
   "name": "@via-org/arweave-client",
-  "version": "0.2.17",
+  "version": "0.3.0",
   "type": "module",
   "exports": {
     ".": {
@@ -37,10 +37,10 @@
   },
   "dependencies": {
     "@hbauer/convenience-functions": "^0.15.1",
-    "@via-org/arweave-crypto": "^0.2.15",
+    "@via-org/arweave-crypto": "^0.3.0",
     "@via-org/avsc": "^6.1.8",
     "@via-org/data-utils": "^0.3.2",
-    "@via-org/deep-hash-list": "^0.2.15",
+    "@via-org/deep-hash-list": "^0.3.0",
     "cross-fetch": "^3.1.5"
   },
   "devDependencies": {
