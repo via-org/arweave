@@ -28,6 +28,6 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@via-org/data-utils": "^0.1.2"
+    "@via-org/data-utils": "^0.3.1"
   }
 }

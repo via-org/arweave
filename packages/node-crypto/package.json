@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "@panva/asn1.js": "^1.0.0",
-    "@via-org/data-utils": "^0.1.2"
+    "@via-org/data-utils": "^0.3.1"
   }
 }

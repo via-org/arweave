@@ -28,8 +28,8 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@hbauer/convenience-functions": "^0.11.1",
+    "@hbauer/convenience-functions": "^0.15.1",
     "@via-org/arweave-crypto": "^0.2.15",
-    "@via-org/data-utils": "^0.2.0"
+    "@via-org/data-utils": "^0.3.1"
   }
 }
