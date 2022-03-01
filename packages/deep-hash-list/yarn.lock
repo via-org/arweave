@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@hbauer/convenience-functions@^0.11.0", "@hbauer/convenience-functions@^0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@hbauer/convenience-functions/-/convenience-functions-0.11.1.tgz#f306070e537e269547c83293f5f17a25bcbaf1ee"
-  integrity sha512-CQpL0bsJb4RLHlaCMNVkZu7Sl/bUfe8WKkcvf6exUqHET+RWtT+Ydxqr+M9clbt6c5iHRs3MZtDdp38pND1K1g==
+"@hbauer/convenience-functions@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@hbauer/convenience-functions/-/convenience-functions-0.15.1.tgz#0e1691bd6ef43461bd76cbb363642a8f59bfe0c7"
+  integrity sha512-rr7wEZUz5dSbsqtCa1Tp2sSmW91QZCBrJgxE2PUlnfV8n4jUZUOvJCCbyI+ADFzvbScRNY+DbddKDk5NvO2/Uw==
 
-"@via-org/data-utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@via-org/data-utils/-/data-utils-0.2.0.tgz#0d9e1a17d05d4cfbc5dd41cce45c218b57725527"
-  integrity sha512-JBfge3p+/MUT0x1W4Wcbb7nCNyxgwRffQR7OQQytRDorddaRCceqbpg086vUKXQ23t+ZUwoFrwrVXfzvAGZOoQ==
+"@via-org/data-utils@^0.3.1":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@via-org/data-utils/-/data-utils-0.3.2.tgz#b4acb14b1c34feb678029fc3c7cf869bd2672221"
+  integrity sha512-2r6WhpvzkhvnjzbMuXkZtHjyChL9FeDPlBm0tsQFYHlT/Fa/WS+VnbTZewBNkP8eIQL+nGKzrsMHHy1WdgZ4pw==
   dependencies:
-    "@hbauer/convenience-functions" "^0.11.0"
+    "@hbauer/convenience-functions" "^0.15.1"
