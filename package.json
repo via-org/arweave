@@ -1,7 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "version": "0.0.0",
   "author": "Donald Geddes",
   "licence": "MIT",
   "repository": "https://github.com/@via-org/arweave.git",
@@ -9,6 +8,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "version": "lerna version",
+    "publish": "lerna publish from-git",
     "prepare": "husky install"
   },
   "devDependencies": {
