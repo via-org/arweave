@@ -8,6 +8,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "version": "lerna version",
+    "publish": "lerna publish from-git",
     "prepare": "husky install"
   },
   "devDependencies": {
