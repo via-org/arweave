@@ -1,8 +1,7 @@
 import { b64UrlToUint8Array, stringToUint8Array } from '@via-org/data-utils'
 
 import { DataItemTags } from './DataItemTags.js'
-
-const SIGNATURE_TYPE = 1
+import { SIGNATURE_TYPE } from './constants.js'
 
 export class DataItemFields {
   static optional = ['target', 'anchor', 'tags']
