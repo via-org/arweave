@@ -1,6 +1,6 @@
 {
   "name": "@via-org/arweave-browser-crypto",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "type": "module",
   "exports": {
     "import": "./lib/index.mjs",
