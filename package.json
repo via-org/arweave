@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "author": "Donald Geddes",
   "licence": "MIT",
   "repository": "https://github.com/@via-org/arweave.git",
