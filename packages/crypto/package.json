@@ -1,6 +1,6 @@
 {
   "name": "@via-org/arweave-crypto",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "type": "module",
   "exports": {
     ".": {
@@ -33,7 +33,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@via-org/arweave-browser-crypto": "^0.3.0",
-    "@via-org/arweave-node-crypto": "^0.3.0"
+    "@via-org/arweave-browser-crypto": "^0.3.3",
+    "@via-org/arweave-node-crypto": "^0.3.3"
   }
 }
