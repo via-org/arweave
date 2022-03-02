@@ -45,21 +45,38 @@ const tags = [
   ['Content-Type', 'application/json'],
 ]
 
+// Create transaction
 const transaction = await arweave.transactions.create({ data, tags }, key)
+assert(/^[a-z0-9-_]{43}$/i.test(transaction.id))
+
+// Post transaction
 const status = await arweave.transactions.post(transaction)
+assert(status === 'PENDING' || status.number_of_confirmations > 0)
 ```
 
 ##### Creating, submitting, and unpacking bundles
 
 ```js
-const itemA = { data: JSON.stringify({ testing: 'true' }, tags: [['Hello', 'World']])
-const itemB = { data: JSON.stringify({ true: 'testing' }, tags: [['Sup', 'Earth']])
+// Get data items ready
+const itemA = {
+  data: JSON.stringify({ testing: true }),
+  tags: [['Hello', 'World']],
+}
+const itemB = {
+  data: JSON.stringify({ testing: 123 }),
+  tags: [['Sup', 'Earth']],
+}
 
+// Create bundle
 const bundle = await arweave.bundles.create([itemA, itemB], key)
+assert(bundle.items.length === 2)
+
+// Post bundle
 const status = await arweave.bundles.post(bundle)
+assert(status === 'PENDING' || status.number_of_confirmations > 0)
 
+// Unpack bundle
 const unpackedBundle = arweave.bundles.unpack(bundle.data)
-
 assert.deepEqual(bundle, unpackedBundle)
 ```
 
@@ -79,7 +96,7 @@ const offset = await arweave.transactions.getOffset(transaction.id)
 const data = await client.transactions.getData(transaction.id)
 
 // Fetch (optimistically) cached Arweave data by transaction ID
-const data = await client.transactions.getCachedData(transactionId)
+const data = await client.transactions.getCachedData(transaction.id)
 ```
 
 ##### Utilities
