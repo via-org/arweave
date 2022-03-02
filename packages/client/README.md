@@ -1,4 +1,6 @@
-# <a href='https://via.dev'><img src='https://via.dev/logo.png' height='50' /></a>
+# <a href='https://via.dev#gh-dark-mode-only'><img src='https://via.dev/logo-light.png' height='50' /></a>
+
+# <a href='https://via.dev#gh-light-mode-only'><img src='https://via.dev/logo.png' height='50' /></a>
 
 <br>
 
