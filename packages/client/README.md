@@ -12,7 +12,7 @@ An Arweave client implementation written for Via
 
 - Small: Under 7KB minified + gzipped
 - Isomorphic: zero reliance on Node built-ins
-- Versatile: Support for [ANS-204 compliant bundles](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md)
+- Versatile: Support for [ANS-104 compliant bundles](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md)
 
 <br>
 
