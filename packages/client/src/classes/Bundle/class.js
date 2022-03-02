@@ -1,5 +1,3 @@
-/** @typedef {import('./DataItem/class.js').DataItem} DataItem */
-
 export class Bundle {
   /** @type {TagEntry[]} */
   static DEFAULT_TAGS = [

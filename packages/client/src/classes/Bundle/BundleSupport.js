@@ -8,7 +8,7 @@ import { uint8ArrayToLong } from './utils/uint8array-to-long.js'
 
 export class BundleSupport {
   /**
-   * @protected Parse bundle binary data into a Bundle instance
+   * Parse bundle binary data into a Bundle instance
    * @param {BundleData} bundleData
    * @example
    *   const bundle = await client.bundles.create([itemA, itemB], key)

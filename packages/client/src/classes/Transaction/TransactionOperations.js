@@ -6,7 +6,7 @@ import { TransactionSupport } from './TransactionSupport/class.js'
 
 /** @implements {TransactionSupport} */
 export class TransactionOperations extends TransactionSupport {
-  /** @param {import('../API/class.js').API} api */
+  /** @param {API} api */
   constructor(api) {
     super(api)
   }

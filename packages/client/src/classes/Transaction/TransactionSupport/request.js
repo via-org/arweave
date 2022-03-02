@@ -53,7 +53,10 @@ export const request = api => ({
       .then(({ body }) => body)
       .catch(pass),
 
-  /** @param {*} data */
+  /**
+   * @param {*} data
+   * @returns {Promise<TransactionResponseStatus>}
+   */
   postTransaction: data => api.post('tx', { data }).catch(pass),
 
   /** @param {*} chunk */
