@@ -9,6 +9,7 @@ An Arweave client implementation written for Via
 ### Features
 
 - Small: Under 7KB minified + gzipped
+- Isomorphic: zero reliance on Node built-ins
 - Versatile: Support for [ANS-204 compliant bundles](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md)
 
 <br>
