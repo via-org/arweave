@@ -1,4 +1,4 @@
-# <a href='https://via.dev'><img src='logo.png' height='50' alt='Redux Logo' aria-label='redux.js.org' /></a>
+# <a href='https://via.dev'><img src='logo.png' height='50' alt='Redux Logo' /></a>
 
 <br>
 
